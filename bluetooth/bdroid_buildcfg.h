@@ -38,11 +38,10 @@ static inline const char *BtmGetDefaultName()
 }
 
 #define BTM_DEF_LOCAL_NAME BtmGetDefaultName()
+#undef PROPERTY_VALUE_MAX
 #define BTM_BYPASS_EXTRA_ACL_SETUP TRUE
 
 #define BLE_INCLUDED TRUE
 #define BLE_VND_INCLUDED TRUE
-
-#undef PROPERTY_VALUE_MAX
 
 #endif

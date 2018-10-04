@@ -54,12 +54,6 @@ TARGET_ADDITIONAL_GRALLOC_10_USAGE_BITS := 0x2080000U
 # Extended Filesystem Support
 TARGET_EXFAT_DRIVER := exfat
 
-ifeq ($(TARGET_AOSP_BASED),)
-# Lineage hardware
-BOARD_HARDWARE_CLASS += \
-    $(VENDOR_PATH)/lineagehw
-endif
-
 # Partitions
 BOARD_SYSTEMIMAGE_PARTITION_SIZE := 3707764736
 BOARD_CACHEIMAGE_PARTITION_SIZE := 16777216
@@ -82,9 +76,6 @@ BOARD_PLAT_PUBLIC_SEPOLICY_DIR += $(VENDOR_PATH)/sepolicy/public
 
 # Shims
 TARGET_LD_SHIM_LIBS := \
-    /system/lib64/libdisplayenginesvc_1_0.so|libshims_hwsmartdisplay_jni.so \
-    /system/lib64/libdisplayenginesvc_1_1.so|libshims_hwsmartdisplay_jni.so \
-    /system/lib64/libhwsmartdisplay_jni.so|libshims_hwsmartdisplay_jni.so \
     /vendor/bin/hw/vendor.huawei.hardware.hisupl@1.0-service|libshims_hisupl.so
 
 # vintf
