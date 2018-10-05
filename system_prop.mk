@@ -29,7 +29,6 @@ PRODUCT_PROPERTY_OVERRIDES += \
 
 # USB
 PRODUCT_SYSTEM_DEFAULT_PROPERTIES += \
-    ro.cust.cdrom=/dev/null
-
-# MTP
-persist.sys.usb.config=mtp,adb
+    ro.cust.cdrom=/dev/null \
+    persist.sys.usb.config=mtp,adb \
+    ro.skip.fingerprint.check=true
