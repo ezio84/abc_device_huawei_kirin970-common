@@ -15,6 +15,7 @@
 #
 
 $(call inherit-product, vendor/huawei/kirin970-common/kirin970-common-vendor.mk)
+$(call inherit-product-if-exists, vendor/gapps/inline.mk)
 
 # Overlays
 DEVICE_PACKAGE_OVERLAYS += \
