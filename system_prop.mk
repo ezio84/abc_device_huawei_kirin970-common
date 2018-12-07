@@ -30,3 +30,6 @@ PRODUCT_PROPERTY_OVERRIDES += \
 # USB
 PRODUCT_SYSTEM_DEFAULT_PROPERTIES += \
     ro.cust.cdrom=/dev/null
+
+# MTP
+persist.sys.usb.config=mtp,adb
