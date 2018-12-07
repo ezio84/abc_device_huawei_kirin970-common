@@ -31,4 +31,5 @@ PRODUCT_PROPERTY_OVERRIDES += \
 PRODUCT_SYSTEM_DEFAULT_PROPERTIES += \
     ro.cust.cdrom=/dev/null \
     persist.sys.usb.config=mtp,adb \
-    ro.skip.fingerprint.check=true
+    ro.skip.fingerprint.check=true \
+    ro.telephony.isHisiRIL=trye
