@@ -57,19 +57,12 @@ TARGET_BOARD_INFO_FILE := $(VENDOR_PATH)/board-info.txt
 # Display
 TARGET_USES_HWC2 := true
 
-# Lineage hardware
-JAVA_SOURCE_OVERLAYS := \
-    org.lineageos.hardware|$(VENDOR_PATH)/lineagehw|**/*.java
-
 # Partitions
 BOARD_BUILD_SYSTEM_ROOT_IMAGE := true
 BOARD_CACHEIMAGE_FILE_SYSTEM_TYPE := ext4
 BOARD_CACHEIMAGE_PARTITION_SIZE := 16777216
 BOARD_SYSTEMIMAGE_PARTITION_SIZE := 3707764736
 TARGET_COPY_OUT_VENDOR := vendor
-
-# Radio
-TARGET_PROVIDES_QTI_TELEPHONY_JAR := true
 
 # Recovery
 TARGET_RECOVERY_FSTAB := $(VENDOR_PATH)/rootdir/etc/fstab.kirin970
@@ -93,8 +86,3 @@ BOARD_ROOT_EXTRA_FOLDERS := \
 # SELinux
 BOARD_PLAT_PRIVATE_SEPOLICY_DIR += $(VENDOR_PATH)/sepolicy/private
 BOARD_PLAT_PUBLIC_SEPOLICY_DIR += $(VENDOR_PATH)/sepolicy/public
-
-# Shims
-TARGET_LD_SHIM_LIBS := \
-    /system/lib64/libdisplayengineservice.so|libshims_hwsmartdisplay_jni.so \
-    /system/lib64/libhwsmartdisplay_jni.so|libshims_hwsmartdisplay_jni.so
