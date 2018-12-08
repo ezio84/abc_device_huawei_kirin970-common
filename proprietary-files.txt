@@ -1919,8 +1919,6 @@ etc/charger/public/800_serial/scp_charging_22.png
 etc/charger/public/800_serial/scp_charging_23.png
 
 # Display engine
-bin/displayengineserver
-etc/init/displayengineserver.rc
 lib64/libc_secshared.so 
 lib64/libdisplayengineservice.so
 lib64/libhuaweicust.so 
