@@ -1929,7 +1929,7 @@ lib64/vendor.huawei.hardware.hwdisplay.displayengine@1.0.so
 lib64/vendor.huawei.hardware.hwdisplay.displayengine@1.1.so
 
 # Radio
-emui/base/global/ons.bin
+emui/base/global/ons.bin:ons.bin
 
 # SmartDisplay
 lib/libhwsmartdisplay_jni.so
