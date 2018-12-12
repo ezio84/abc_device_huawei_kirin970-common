@@ -13,10 +13,18 @@ on fs
     mkdir /data/sec_storage_data 0770 system system
     mkdir /data/sec_storage_data_users 0770 system system
 
+    trigger cust_parse_action
+
 on property:sys.boot_completed=1
     write /sys/class/hw_power/charger/direct_charger/iin_thermal 4500
     write /sys/class/hw_power/charger/charge_data/iin_thermal 2000
     stop displayengine-hal-1-0
+
+on post-fs
+    start hwfactoryinterface-hal-1-1
+
+on post-fs-data
+    start teecd
 
 on property:ro.lineage.device=*
     setprop qemu.hw.mainkeys 1
