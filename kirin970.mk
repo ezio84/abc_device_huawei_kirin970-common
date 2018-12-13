@@ -42,6 +42,10 @@ PRODUCT_PACKAGES += \
     Tag \
     com.android.nfc_extras
 
+# odm-init
+PRODUCT_PACKAGES += \
+    odm-init
+
 # Permissions
 PRODUCT_COPY_FILES += \
     frameworks/native/data/etc/android.hardware.fingerprint.xml:system/etc/permissions/android.hardware.fingerprint.xml \
